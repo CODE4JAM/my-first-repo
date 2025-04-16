@@ -1,27 +1,28 @@
+-주요명령어-
 git --version // 깃 버전 확인
 git config --global user.name "" // 사용자 이름 설정
 git config --global user.email "" // 사용자 이메일 설정
 git config --list // 설정 확인
 
 git init // git 저장소 생성
-git status
+git status // 깃 상태
 git add README.md // 추적할 파일 지정
 git commit -m "first commit" // 변경 이력 저장
 
-git add . 전체 파일 스테이징
-git commit 변경 이력 저장
+git add . // 전체 파일 스테이징
+git commit // 변경 이력 저장
 
 
 -새로운 저장소 생성시-
-git init
-git add README.md
+git init // 깃 저장소 생성
+git add README.md // 깃에 README.md 파일 추가
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/bokmoon/my-first-repo.git
+git remote add origin https://github.com/bokmoon/my-first-repo.git ※이건 교수님 계정으로 연결되어 있음. http주소를 본인의 깃허브 레포지토리 주소로 바꿔야 함
 git push -u origin main
 
 -기존 저장소 업로드시-
-git remote add origin https://github.com/bokmoon/my-first-repo.git
+git remote add origin https://github.com/bokmoon/my-first-repo.git ※이것도 http 주소는 본인의 깃허브 레포지토리로 변경
 git branch -M main
 git push -u origin main
 

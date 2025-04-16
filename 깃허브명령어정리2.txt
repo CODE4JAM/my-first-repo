@@ -1,0 +1,61 @@
+[ Git & GitHub 기본 명령어 정리 ]
+
+1. Git 설정 관련
+--------------------
+git --version                     # 깃 버전 확인
+git config --global user.name "" # 사용자 이름 설정 (전역)
+git config --global user.email ""# 사용자 이메일 설정 (전역)
+git config --list                # 설정 확인
+git config user.name ""          # 특정 저장소에서 사용자 이름 설정 (옵션)
+git config user.email ""         # 특정 저장소에서 사용자 이메일 설정 (옵션)
+
+2. 로컬 저장소 생성 및 초기화
+--------------------
+git init                          # 현재 폴더를 git 저장소로 초기화
+git status                        # 파일 상태 확인
+git add README.md                 # README.md 파일을 추적 대상으로 추가
+git add .                         # 모든 변경 파일을 스테이징
+git commit -m "first commit"      # 커밋 메시지와 함께 변경사항 저장
+
+3. 새로운 저장소 생성 후 GitHub에 업로드
+--------------------
+git init
+git add .
+git commit -m "first commit"
+git branch -M main                                # 브랜치 이름을 main으로 변경
+git remote add origin https://github.com/사용자명/저장소명.git
+git push -u origin main
+
+※ 참고: 위 URL은 본인의 GitHub 저장소 주소로 변경
+
+4. 기존 로컬 저장소를 GitHub에 연결할 때
+--------------------
+git remote add origin https://github.com/사용자명/저장소명.git
+git branch -M main
+git push -u origin main
+
+5. GitHub 저장소 클론 후 작업 시작
+--------------------
+git clone https://github.com/사용자명/저장소명.git
+cd 저장소명
+git status
+
+6. 이후 반복 작업 (수정 사항 반영)
+--------------------
+git status                          # 변경사항 확인
+git add .                           # 변경된 파일 모두 스테이징
+git commit -m "업데이트 메시지"      # 커밋
+git push                            # 원격 저장소에 업로드
+
+7. 브랜치 관련 (선택)
+--------------------
+git branch                          # 현재 브랜치 확인
+git checkout -b 새브랜치명          # 새 브랜치 생성 및 이동
+git checkout main                   # 메인 브랜치로 이동
+git merge 새브랜치명                # 병합
+
+8. 기타 유용한 명령어
+--------------------
+git log                             # 커밋 히스토리 확인
+git diff                            # 변경 내용 비교
+touch .gitignore                    # 무시할 파일 목록 지정
