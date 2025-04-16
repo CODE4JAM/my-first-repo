@@ -1,0 +1,33 @@
+git --version // 깃 버전 확인
+git config --global user.name "" // 사용자 이름 설정
+git config --global user.email "" // 사용자 이메일 설정
+git config --list // 설정 확인
+
+git init // git 저장소 생성
+git status
+git add README.md // 추적할 파일 지정
+git commit -m "first commit" // 변경 이력 저장
+
+git add . 전체 파일 스테이징
+git commit 변경 이력 저장
+
+
+-새로운 저장소 생성시-
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bokmoon/my-first-repo.git
+git push -u origin main
+
+-기존 저장소 업로드시-
+git remote add origin https://github.com/bokmoon/my-first-repo.git
+git branch -M main
+git push -u origin main
+
+
+-이후 파일 수정 및 새로 업로드시-
+-아래 명령어 반복-
+git add .
+git commit -m "필요한 업데이트 이름"
+git push -u origin main
